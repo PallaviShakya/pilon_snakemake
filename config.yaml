@@ -1,0 +1,11 @@
+# config.yaml
+
+ref: "/home/pshakya/rawreads/illumina/UL_hifi_Hic.p_ctg.fa"
+reads1: "/home/pshakya/rawreads/illumina/VW9_S2_L004_R1_001.fastq.gz"
+reads2: "/home/pshakya/rawreads/illumina/VW9_S2_L004_R2_001.fastq.gz"
+p1: "/home/pshakya/rawreads/illumina/pilon1.fasta"
+p2: "/home/pshakya/rawreads/illumina/pilon2.fasta"
+p3: "/home/pshakya/rawreads/illumina/pilon3.fasta"
+p4: "/home/pshakya/rawreads/illumina/pilon4.fasta"
+p5: "/home/pshakya/rawreads/illumina/pilon5.fasta"
+threads: 65
