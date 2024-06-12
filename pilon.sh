@@ -15,9 +15,9 @@ set -o errexit
 set -x
 
 # set variables
-#ref="/home/pshakya/rawreads/UL_hifi_Hic.p_ctg.fa"
-reads1="/home/pshakya/rawreads/illumina/VW9_S2_L004_R1_001.fastq.gz"
-reads2="/home/pshakya/rawreads/illumina/VW9_S2_L004_R2_001.fastq.gz"
+#ref="rawreads/UL_hifi_Hic.p_ctg.fa"
+reads1="rawreads/illumina/VW9_S2_L004_R1_001.fastq.gz"
+reads2="rawreads/illumina/VW9_S2_L004_R2_001.fastq.gz"
 THREADS=65
 
 conda activate genome_polish

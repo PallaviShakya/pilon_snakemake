@@ -1,7 +1,7 @@
-# Define the configuration
+# config file
 configfile: "config.yaml"
 
-# Define the range of iterations
+# Tried to define iterations but ended up not using it
 NUM_ITERATIONS = 6  # Define how many iterations you want
 
 # Rule all for final output
@@ -11,9 +11,10 @@ rule all:
 
 
 # Initial alignment rule for the draft genome
+# Had to keep changing it for the subsequent assemblies. 
 rule align_reads_draft:
     input:
-        ref=config["p5"],
+        ref=config["p5"],  
         reads1=config["reads1"],
         reads2=config["reads2"]
     output:
@@ -42,5 +43,5 @@ rule process_genome:
         sambamba markdup -t {threads} {output.bam} NGS_aligned{wildcards.version}_marked.bam
         mv NGS_aligned{wildcards.version}_marked.bam {output.bam}
         samtools index -@ {threads} {output.bam}
-        java -Xmx205G -jar /group/siddiquegrp/tools/pilon-1.23.jar --threads {threads} --genome {input.ref} --frags {output.bam} --fix snps,indels --changes --output {output.fasta}
+        java -Xmx205G -jar /tools/pilon-1.23.jar --threads {threads} --genome {input.ref} --frags {output.bam} --fix snps,indels --changes --output {output.fasta}
         """
