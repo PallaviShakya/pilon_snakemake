@@ -2,7 +2,7 @@
 ```
 conda create -n genome_polish -y
 conda activate genome_polish
-mamba install -c bioconda pbmm2 bwa samtools sambamba snakemake -y
+mamba install -c bioconda pbmm2 bwa samtools sambamba snakemake java -y
 ```
 
 1. Index the unpolished genome using bwa index 
